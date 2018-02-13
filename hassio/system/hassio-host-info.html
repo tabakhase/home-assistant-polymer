@@ -8,7 +8,7 @@
     <style include="iron-flex ha-style">
       paper-card {
         display: block;
-        height: 100%;
+        max-width: 300px;
       }
       .info {
         width: 100%;
@@ -21,7 +21,8 @@
         margin-top: 16px;
       }
     </style>
-    <paper-card heading="Host OS">
+    <h1>Host</h1>
+    <paper-card>
       <div class="card-content">
         <table class='info'>
           <tr>
@@ -81,15 +82,8 @@ class HassioHostInfo extends Polymer.Element {
 
   static get properties() {
     return {
-      hass: {
-        type: Object,
-      },
-
-      data: {
-        type: Object,
-        value: {},
-      },
-
+      hass: Object,
+      data: Object,
       errors: String,
     };
   }

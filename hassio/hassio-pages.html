@@ -2,10 +2,9 @@
 <link rel='import' href='../bower_components/iron-pages/iron-pages.html'>
 
 <link rel='import' href='./dashboard/hassio-dashboard.html'>
-<link rel='import' href='./advanced/hassio-advanced.html'>
+<link rel='import' href='./system/hassio-system.html'>
 <link rel='import' href='./addon-view/hassio-addon-view.html'>
 <link rel='import' href='./addon-store/hassio-addon-store.html'>
-<link rel='import' href='./supervisor/hassio-supervisor.html'>
 <link rel='import' href='./snapshots/hassio-snapshots.html'>
 
 <dom-module id='hassio-pages'>
@@ -27,11 +26,6 @@
         hass='[[hass]]'
       ></hassio-addon-store>
 
-      <hassio-supervisor
-        page-name='supervisor'
-        hass='[[hass]]'
-      ></hassio-supervisor>
-
       <hassio-dashboard
         page-name='dashboard'
         hass='[[hass]]'
@@ -39,13 +33,12 @@
         hass-info='[[hassInfo]]'
       ></hassio-dashboard>
 
-      <hassio-advanced
-        page-name='advanced'
+      <hassio-system
+        page-name='system'
         hass='[[hass]]'
         supervisor-info='[[supervisorInfo]]'
         host-info='[[hostInfo]]'
-        hass-info='[[hassInfo]]'
-      ></hassio-advanced>
+      ></hassio-system>
 
       <hassio-snapshots
         page-name='snapshots'
